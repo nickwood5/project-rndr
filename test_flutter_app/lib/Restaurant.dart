@@ -27,7 +27,7 @@ class Restaurant
     // Implement toString to make it easier to see information when using the print statement.
   @override
   String toString() {
-    return 'Dog{id: $id, name: $name, age: $age}';
+    return 'Restaurant{id: $id, name: $name, address: $address, image: $image}';
   }
 }
 void main() async {
