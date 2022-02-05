@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'RNDR.dart';
+<<<<<<< HEAD
+=======
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+>>>>>>> 4eae0e32d326c98201f04f54270f73847d20b36e
 
 // hi
 void main() {
@@ -27,6 +32,16 @@ class MyHomePage extends StatefulWidget {
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
+}
+
+Future<String> getData() async {
+  final response =
+      await http.get(Uri.parse('http://nickwood5.pythonanywhere.com'));
+
+  var responseData = json.decode(response.body);
+  print(responseData);
+
+  return responseData['name'];
 }
 
 class _MyHomePageState extends State<MyHomePage> {
