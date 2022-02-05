@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'RNDR.dart';
-<<<<<<< HEAD
-=======
 import 'package:http/http.dart' as http;
 import 'dart:convert';
->>>>>>> 4eae0e32d326c98201f04f54270f73847d20b36e
 
 // hi
 void main() {
