@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'RNDR.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'dart:async';
+
+import 'package:flutter/widgets.dart';
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 // hi
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -31,21 +34,9 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-Future<String> getData() async {
-  final response =
-      await http.get(Uri.parse('http://nickwood5.pythonanywhere.com'));
-
-  var responseData = json.decode(response.body);
-  print(responseData);
-
-  return responseData['name'];
-}
-
 class _MyHomePageState extends State<MyHomePage> {
   @override
-
   Widget build(BuildContext context) {
-    getData();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
