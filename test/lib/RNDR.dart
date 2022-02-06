@@ -45,6 +45,7 @@ class _RNDRState extends State<RNDRWidget> {
     return Container(
         width: MediaQuery.of(context).size.width * 0.9,
         height: MediaQuery.of(context).size.height * 0.7,
+        color: Colors.white,
         child: Stack(
           children: cards,
         ));
@@ -66,7 +67,7 @@ class Card extends StatelessWidget {
                     image: NetworkImage(color), 
                     fit: BoxFit.cover,
                     ),
-                borderRadius: BorderRadius.all(Radius.circular(16)
+                borderRadius: BorderRadius.all(Radius.circular(26)
               )
             )),))
             
