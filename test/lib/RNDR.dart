@@ -81,7 +81,13 @@ class Card extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(26)))),
           )),
 
-      onSwipeRight: (finalPosition) {},
+      onSwipeRight: (finalPosition) async {
+        await Navigator.push(
+        context,
+        MaterialPageRoute(
+        builder: (context) => ConfirmationWidget(),
+        ));
+      },
     );
   }
 }
