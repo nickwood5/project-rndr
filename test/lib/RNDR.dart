@@ -14,14 +14,45 @@ class RNDRWidget extends StatefulWidget {
 final List data = [
   {
     'restaurantWidget': Colors.red, //add more info here
-    'image': dartName,
+    'image': urls[0],
     'name': "Coffee Time",
   },
   {
     'restaurantWidget': Colors.green,
-    'image':
-        'https://cdn.discordapp.com/attachments/930235747036958760/939618577739284540/Peppermint-Matcha-Latte.jpeg',
-  }
+    'image': urls[1],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[2],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[3],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[4],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[5],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[6],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[7],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[8],
+  },
+  {
+    'restaurantWidget': Colors.green,
+    'image': urls[9],
+  },
   //add more here but update List<Card> indeces
 ];
 
@@ -39,6 +70,30 @@ class _RNDRState extends State<RNDRWidget> {
     ),
     Card(
       data[1]['image'],
+    ),
+    Card(
+      data[2]['image'],
+    ),
+    Card(
+      data[3]['image'],
+    ),
+    Card(
+      data[4]['image'],
+    ),
+    Card(
+      data[5]['image'],
+    ),
+    Card(
+      data[6]['image'],
+    ),
+    Card(
+      data[7]['image'],
+    ),
+    Card(
+      data[8]['image'],
+    ),
+    Card(
+      data[9]['image'],
     ),
   ];
 

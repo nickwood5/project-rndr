@@ -17,6 +17,7 @@ void getApiData() async {
     var responseData = json.decode(response.body);
     for (int i = 0; i < 10; i++) {
       String url = responseData[i]['img_link'];
+      print(url);
       urls.add(url);
     }
   } finally {
