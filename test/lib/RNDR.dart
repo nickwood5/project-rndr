@@ -9,12 +9,10 @@ class RNDRWidget extends StatefulWidget {
   _RNDRState createState() => _RNDRState();
 }
 
-
 final List data = [
   {
     'restaurantWidget': Colors.red, //add more info here
-    'image':
-        dartName,
+    'image': dartName,
     'name': "Coffee Time",
   },
   {
@@ -61,19 +59,29 @@ class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Swipable(
-        //child: Container(
-          child: SafeArea(key: key, left: true, top: true, right: true, bottom: true, minimum: EdgeInsets.zero, maintainBottomViewPadding: false, child: Align(alignment: Alignment.center, child: Container(height: MediaQuery.of(context).size.height * 0.5,
-            width: MediaQuery.of(context).size.width * 0.9,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(color), 
-                    fit: BoxFit.cover,
+      //child: Container(
+      child: SafeArea(
+          key: key,
+          left: true,
+          top: true,
+          right: true,
+          bottom: true,
+          minimum: EdgeInsets.zero,
+          maintainBottomViewPadding: false,
+          child: Align(
+            alignment: Alignment.center,
+            child: Container(
+                height: MediaQuery.of(context).size.height * 0.5,
+                width: MediaQuery.of(context).size.width * 0.9,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(color),
+                      fit: BoxFit.cover,
                     ),
-                borderRadius: BorderRadius.all(Radius.circular(26)
-              )
-            )),))
-            
-        //)
+                    borderRadius: BorderRadius.all(Radius.circular(26)))),
+          )),
+
+      onSwipeRight: (finalPosition) {},
     );
   }
 }
