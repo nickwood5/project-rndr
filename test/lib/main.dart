@@ -9,19 +9,23 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'test.dart';
 
-Future<String> getData() async {
-  final response =
-      await http.get(Uri.parse('http://nickwood5.pythonanywhere.com'));
-
-  var responseData = json.decode(response.body);
-  print(responseData);
-
-  return responseData[0]['img_link'];
+Future<String> getApiData() async {
+  var client = new http.Client();
+  try {
+    final response =
+        await client.get(Uri.parse('http://nickwood5.pythonanywhere.com'));
+    var responseData = json.decode(response.body);
+    for (int i = 0; i < 10; i++) {
+      String url = responseData[i]['img_link'];
+      
+    }
+  } finally {
+    client.close();
+  }
 }
 
 void main() async {
-  Future<String> a = getData();
-  dartName = await a;
+  getApiData();
   print("Hello");
   print(dartName);
   runApp(MyApp());
