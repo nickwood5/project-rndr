@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swipable/flutter_swipable.dart';
+import 'test.dart';
 
 class RNDRWidget extends StatefulWidget {
   const RNDRWidget({Key key}) : super(key: key);
@@ -8,11 +9,12 @@ class RNDRWidget extends StatefulWidget {
   _RNDRState createState() => _RNDRState();
 }
 
+
 final List data = [
   {
     'restaurantWidget': Colors.red, //add more info here
     'image':
-        'https://cdn.discordapp.com/attachments/930235747036958760/939618222305574962/Salted-Caramel-Latte_preview.jpeg',
+        dartName,
     'name': "Coffee Time",
   },
   {

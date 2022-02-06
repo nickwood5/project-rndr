@@ -7,6 +7,7 @@ import 'flutter_flow/internationalization.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'test.dart';
 
 Future<String> getData() async {
   final response =
@@ -15,12 +16,14 @@ Future<String> getData() async {
   var responseData = json.decode(response.body);
   print(responseData);
 
-  return responseData[0]['name'];
+  return responseData[0]['img_link'];
 }
 
 void main() async {
   Future<String> a = getData();
-  print(a);
+  dartName = await a;
+  print("Hello");
+  print(dartName);
   runApp(MyApp());
 }
 
