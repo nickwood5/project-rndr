@@ -9,7 +9,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'test.dart';
 
-Future<String> getApiData() async {
+void getApiData() async {
   var client = new http.Client();
   try {
     final response =
@@ -17,7 +17,7 @@ Future<String> getApiData() async {
     var responseData = json.decode(response.body);
     for (int i = 0; i < 10; i++) {
       String url = responseData[i]['img_link'];
-      
+      urls.add(url);
     }
   } finally {
     client.close();
@@ -27,7 +27,7 @@ Future<String> getApiData() async {
 void main() async {
   getApiData();
   print("Hello");
-  print(dartName);
+  print(urls);
   runApp(MyApp());
 }
 
