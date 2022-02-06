@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'RNDR.dart';
 import 'dart:async';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 import 'package:flutter/widgets.dart';
 import 'package:path/path.dart';
@@ -35,7 +37,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 Future<String> getData() async {
-  final response = await http.get(Uri.parse('http://nickwood5.pythonanywhere.com'));
+  final response =
+      await http.get(Uri.parse('http://nickwood5.pythonanywhere.com'));
 
   var responseData = json.decode(response.body);
   print(responseData);
