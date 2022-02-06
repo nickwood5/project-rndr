@@ -5,8 +5,22 @@ import 'package:test/home_page/home_page_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+Future<String> getData() async {
+  final response =
+      await http.get(Uri.parse('http://nickwood5.pythonanywhere.com'));
+
+  var responseData = json.decode(response.body);
+  print(responseData);
+
+  return responseData[0]['name'];
+}
 
 void main() async {
+  Future<String> a = getData();
+  print(a);
   runApp(MyApp());
 }
 
